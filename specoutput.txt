@@ -1,0 +1,51 @@
+test_mydb.py:
+
+MyDB:
+
+  Init:
+    ✓ File name atrributeset
+    ✓ Check file existence
+
+  LoadStrings:
+    ✓ Open file binary
+    ✓ Loaded data frompickle
+
+  SaveString:
+    ✓ Calls load string
+    ✓ Appends string to existing
+
+  SaveStrings:
+    ✓ Empty list saved correctly
+    ✓ Handles file context manager
+
+test_squirrel_server.py:
+
+SquirrelServerHandler:
+
+  Handle404:
+    ✓ Send 404 status and text content type
+    ✓ Write 404 message to response body
+
+  HandleSquirrelsCreate:
+    ✓ Call createSquirrel with parsed data
+    ✓ Send 201 status code
+
+  HandleSquirrelsDelete:
+    ✓ DeleteSquirrel with correct id
+    ✓ Send 204 status when delete successful
+    ✓ Handle404 when squirrel not found
+
+  HandleSquirrelsIndex:
+    ✓ Calls getsquirrels on database
+    ✓ Send 200 status and json content type
+    ✓ Write json response body
+
+  HandleSquirrelsRetrieve:
+    ✓ GetSquirrel with correct id
+    ✓ Send 200 when squirrel found
+    ✓ Handle404 when squirrel not found
+
+  HandleSquirrelsUpdate:
+    ✓ UpdateSquirrel with correct parameters
+    ✓ Send 204 status when update successful
+    ✓ Handle404 when squirrel not found
